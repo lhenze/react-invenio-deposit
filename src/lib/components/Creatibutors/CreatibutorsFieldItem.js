@@ -111,6 +111,7 @@ export const CreatibutorsFieldItem = ({
           <List.Content>
             <List.Description>
               <span className="creatibutor">
+                {displayName}{' '}
                 {_get(initialCreatibutor, 'person_or_org.identifiers', []).some(
                   (identifier) => identifier.scheme === 'orcid'
                 ) && (
@@ -121,8 +122,7 @@ export const CreatibutorsFieldItem = ({
                     width="16"
                     height="16"
                   />
-                )}
-                {displayName}{' '}
+                )}{' '}
                 {renderRole(initialCreatibutor?.role, roleOptions)}
               </span>
             </List.Description>
